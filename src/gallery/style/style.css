@@ -1,0 +1,34 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Home page styles */
+  .home {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e3f2fd;
+  }
+  
+  /* About Us page styles */
+  .about-us {
+    padding: 2rem;
+    background-color: #bbdefb;
+  }
+  
+  /* Contact Us page styles */
+  .contact-us {
+    padding: 2rem;
+    background-color: #c8e6c9;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    nav ul li {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  
