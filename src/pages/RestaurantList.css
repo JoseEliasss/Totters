@@ -1,0 +1,61 @@
+/* RestaurantList.css */
+
+.restaurant-list {
+  display: flex; /* Use Flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+  justify-content: space-around; /* Space out items evenly */
+  padding: 0; /* Remove default padding from the list */
+  list-style-type: none; /* Remove bullets from list items */
+}
+
+.restaurant-item {
+  flex: 0 0 400px; /* Set a fixed width of 300px for each item */
+  height: 270px; /* Keep the fixed height for each item */
+  margin: 15px; /* Add margin between items */
+  padding: 10px; /* Padding inside each item */
+  border: 1px solid #ddd; /* Optional: border around each item */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center; /* Center the text inside the item */
+  background-color: #f9f9f9; /* Optional: light background color */
+  overflow: hidden; /* Hide overflow to maintain box size */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+  transition: transform 0.2s; /* Optional: transition for hover effect */
+}
+
+.restaurant-item:hover {
+  transform: scale(1.05); /* Scale up on hover for a nice effect */
+}
+
+.restaurant-image {
+  width: 100%; /* Make the image full width of the item */
+  height: 120px; /* Fixed height for the image */
+  object-fit: cover; /* Maintain aspect ratio of images */
+  border-radius: 4px; /* Optional: rounded corners for the image */
+}
+
+/* New rule to remove underline from links */
+.restaurant-item a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Use inherited color for links */
+}
+
+.restaurant-item a:hover {
+  color: #007bff; /* Optional: Change link color on hover */
+}
+
+.title {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  line-height: 120px;
+  letter-spacing: 2px;
+}
+
+.restaurantName,
+.currencyAbout,
+.nameLocation,
+.rating {
+  color: black;
+  text-decoration: none;
+  text-align: left;
+}
