@@ -1,36 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./RestaurantList.css"; // Make sure this path is correct
 import data from "../FoodData"; // Adjust the import based on your folder structure
+import FavIcon from "../gallery/images/Favorite.png";
+import NotFavIcon from "../gallery/images/NotFavorite.png";
+import Restaurant from "./Restaurant";
 
 const RestaurantList = () => {
   return (
     <div>
       <h1 className="title">Restaurants</h1>
-      <ul className="restaurant-list">
-        {data.map((restaurant) => (
-          <li key={restaurant.id} className="restaurant-item">
-            <Link to={`/restaurant/${restaurant.id}`}>
-              <img
-                src={restaurant.pic}
-                alt={restaurant.name}
-                className="restaurant-image" // Optional: for styling the image
-              />
-              <span className="nameLocation">
-                <h2 className="restaurantName">
-                  {restaurant.name} - {restaurant.location}
-                </h2>
-              </span>
-              <span className="currencyAbout">
-                <p>
-                  {restaurant.currency} - {restaurant.type}
-                </p>
-              </span>
-              <p className="rating">Rating: {restaurant.rating}</p>
-            </Link>
-          </li>
+      <div className="restaurants-list">
+        {data.map((r) => (
+          <Restaurant key={r.id} favorite={r.favorite} {...r} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
