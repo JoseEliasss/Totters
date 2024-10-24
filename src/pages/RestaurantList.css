@@ -1,38 +1,37 @@
 .restaurant-list {
-  display: flex; /* Use Flexbox for layout */
-  flex-wrap: wrap; /* Allow items to wrap onto the next line */
-  justify-content: space-around; /* Space out items evenly */
-  padding: 0; /* Remove default padding from the list */
-  list-style-type: none; /* Remove bullets from list items */
-  flex: 0 0 400px; /* Set a fixed width of 300px for each item */
-  height: 270px; /* Keep the fixed height for each item */
-  width: 400px; /* Keep the fixed height for each item */
-  margin: 15px; /* Add margin between items */
-  padding: 10px; /* Padding inside each item */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 0;
+  list-style-type: none;
+  height: 370px;
+  width: 400px;
   border: 1px solid #ddd; /* Optional: border around each item */
   border-radius: 8px; /* Rounded corners */
   text-align: left; /* Center the text inside the item */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
-  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .restaurants-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 2em;
 }
 .restaurant-image {
   width: 100%; /* Make the image full width of the item */
-  height: 120px; /* Fixed height for the image */
+  height: 200px; /* Fixed height for the image */
   object-fit: cover; /* Maintain aspect ratio of images */
   border-radius: 4px; /* Optional: rounded corners for the image */
 }
 .favIcon {
   position: absolute;
-  top: 0.5%;
-  right: 0%;
+  top: -2%;
+  right: -2.5%;
   z-index: 1;
-  font-size: 1.3em;
+  font-size: 1.5em;
   border: 0px;
   background-color: transparent;
 }
@@ -62,4 +61,29 @@
   color: black;
   text-decoration: none;
   text-align: left;
+  padding: 0;
+}
+.feedback {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.delivery {
+  position: absolute;
+  top: 45%;
+  right: 0%;
+  z-index: 1;
+  text-align: center;
+  width: 6em;
+  padding: 0.5em;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15%;
+  border: 1px solid rgb(154, 139, 139);
+  color: black;
+}
+
+.nameLocation {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
 }

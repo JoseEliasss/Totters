@@ -1,9 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./RestaurantList.css";
-import FavIcon from "../gallery/images/Favorite.png";
-import NotFavIcon from "../gallery/images/NotFavorite.png";
-
+import feedback from "../gallery/images/Feedback.png";
 export default function Restaurant({
   id,
   name,
@@ -43,7 +41,13 @@ export default function Restaurant({
           {currency} - {type}
         </p>
       </span>
-      <p className="rating">Rating: {rating}</p>
+      <span className="feedback">
+        <img src={feedback} alt="feedback" style={{ width: 20, height: 20 }} />
+        <p className="rating">
+          Rating: <b>{rating}</b>
+        </p>
+      </span>
+      <p className="delivery"> {delivery}</p>
     </div>
   );
 }

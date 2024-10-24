@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./RestaurantList.css"; // Make sure this path is correct
-import data from "../FoodData"; // Adjust the import based on your folder structure
-import FavIcon from "../gallery/images/Favorite.png";
-import NotFavIcon from "../gallery/images/NotFavorite.png";
+import "./RestaurantList.css";
+import data from "../FoodData";
 import Restaurant from "./Restaurant";
 
 const RestaurantList = () => {
