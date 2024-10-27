@@ -6,20 +6,22 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
-import RestaurantList from "./pages/RestaurantList";
+import Restaurants from "./pages/Restaurants";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/aboutUs" element={<AboutUs />} />
-        <Route path="/contactUs" element={<ContactUs />} />
-        <Route path="/restaurantList" element={<RestaurantList />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/contactUs" element={<ContactUs />} />
+          <Route path="/Restaurants" element={<Restaurants />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
