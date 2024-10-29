@@ -1,0 +1,11 @@
+.Restaurants {
+    margin: 0px 40px;
+}
+
+.title {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    line-height: 120px;
+    letter-spacing: 2px;
+  }

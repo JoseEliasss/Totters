@@ -7,6 +7,7 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
 import Restaurants from "./pages/Restaurants";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/Restaurants" element={<Restaurants />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

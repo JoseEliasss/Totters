@@ -46,14 +46,6 @@
   color: #007bff; /* Optional: Change link color on hover */
 }
 
-.title {
-  color: black;
-  text-decoration: none;
-  text-align: center;
-  line-height: 120px;
-  letter-spacing: 2px;
-}
-
 .restaurantName,
 .currencyAbout,
 .nameLocation,

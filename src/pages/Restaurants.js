@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../gallery/style/RestaurantList.css";
-import data from "../FoodData";
+import "../gallery/style/Restaurants.css";
 import RestaurantList from "../components/RestaurantList"
 
 const Restaurants = () => {
   return (
-    <div>
+    <div className="Restaurants">
         <h1 className="title">Restaurants</h1>
-        <RestaurantList count={5}/>
+        <RestaurantList/>
     </div>
   );
 };
