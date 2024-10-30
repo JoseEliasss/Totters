@@ -12,6 +12,7 @@
   border-radius: 8px; /* Rounded corners */
   text-align: left; /* Center the text inside the item */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
 .restaurants-list {
@@ -19,13 +20,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2em;
+  text-decoration: none;
 }
+
 .restaurant-image {
   width: 100%; /* Make the image full width of the item */
   height: 200px; /* Fixed height for the image */
   object-fit: cover; /* Maintain aspect ratio of images */
   border-radius: 4px; /* Optional: rounded corners for the image */
 }
+
 .favIcon {
   position: absolute;
   top: -2%;
@@ -36,30 +40,21 @@
   background-color: transparent;
 }
 
-/* New rule to remove underline from links */
-.restaurant-item a {
-  text-decoration: none; /* Remove underline from links */
-  color: inherit; /* Use inherited color for links */
-}
-
-.restaurant-item a:hover {
-  color: #007bff; /* Optional: Change link color on hover */
-}
-
 .restaurantName,
 .currencyAbout,
-.nameLocation,
-.rating {
+.delivery {
   color: black;
-  text-decoration: none;
+  text-decoration: none; /* Ensure no underline */
   text-align: left;
   padding: 0;
 }
+
 .feedback {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 .delivery {
   position: absolute;
   top: 45%;
@@ -78,4 +73,8 @@
   display: flex;
   flex-direction: row;
   padding: 0;
+}
+
+.rating {
+  color: black;
 }

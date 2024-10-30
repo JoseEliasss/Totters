@@ -12,7 +12,7 @@ const RestaurantList = ({ count, typeFilter }) => {
   const displayedData = count ? filteredData.slice(0, count) : filteredData; // Show all restaurants if no count is provided
 
   return (
-    <div>
+    <div className="Restaurants">
       <div className="restaurants-list">
         {displayedData.map((r) => (
           <RestaurantCard
