@@ -1,0 +1,65 @@
+/* Selection container */
+.selection {
+    padding: 30px;
+    text-align: center;
+}
+
+/* Section title styling */
+.selection h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Carousel container for horizontal scroll */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+
+/* Smooth scrollbars */
+.carousel-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+    background-color: #bbb;
+}
+
+/* "View All" button styling at the end of carousel */
+.view-all {
+    min-width: 120px;
+    flex: 0 0 auto;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 15px;
+}
+
+.view-all:hover {
+    background: linear-gradient(135deg, #0056b3, #003f8a);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 86, 179, 0.4);
+}
+
+.view-all:focus {
+    outline: none;
+}

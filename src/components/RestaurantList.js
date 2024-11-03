@@ -1,18 +1,21 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import "../gallery/style/RestaurantList.css";
 import data from "../FoodData";
 import RestaurantCard from "./RestaurantCard";
 
-const RestaurantList = ({ count, typeFilter }) => {
-  const filteredData = typeFilter
-    ? data.filter((r) => r.type === typeFilter)
-    : data; // Show all restaurants if no typeFilter is provided
+const RestaurantList = ({ count, typeFilter, location }) => {
+  console.log("Type Filter:", typeFilter, "Count:", count, "Location:", location);
 
-  const displayedData = count ? filteredData.slice(0, count) : filteredData; // Show all restaurants if no count is provided
+  const filteredData = data
+    .filter((r) => 
+      (!typeFilter || r.type.some((type) => type.toLowerCase() === typeFilter.toLowerCase())) &&
+      (!location || r.location.toLowerCase() === location.toLowerCase())
+    );
+
+  const displayedData = count ? filteredData.slice(0, count) : filteredData;
 
   return (
-    <div className="Restaurants">
+    <div className="restaurants">
       <div className="restaurants-list">
         {displayedData.map((r) => (
           <RestaurantCard

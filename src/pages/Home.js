@@ -5,20 +5,17 @@ import Gif2 from "../gallery/images/gif2.gif";
 import Gif3 from "../gallery/images/gif3.gif";
 import AppStore from "../gallery/images/AppStore.png";
 import GooglePLay from "../gallery/images/GooglePlay.png";
+import Selection from '../components/Selection';  // Update path if needed
+import Hero from "../components/Hero";
+import HomeHero from "../gallery/images/HomeHero.jpeg"
+import Status from "../components/Status";
 
 const Home = () => {
   return (
     <div className="home">
+      <Status />
+      <Hero image={HomeHero} title="Quick Reliable Convenient" />
       <div className="container">
-        <div className="status">
-          <div className="orders-status">
-            <div className="green-status">Green</div>
-            <div className="sub-status">
-              10 more orders by October 31 to reach Gold.
-            </div>
-          </div>
-          <div className="points-status">80K Points</div>
-        </div>
 
         <div className="Hero">
           <div className="hero-details-section">
@@ -52,6 +49,8 @@ const Home = () => {
             <img className="gif" src={Gif2} alt="gif2" />
           </div>
         </div>
+
+        <Selection type="Italian" count={5} />
       </div>
     </div>
   );

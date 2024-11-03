@@ -1,0 +1,185 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .about-us {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 0 40px;
+    overflow-x: hidden;
+  }
+
+  /* About Us Hero Container */
+.aboutUs-hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3em 1em;
+    color: #333;
+  }
+  
+  /* About Us Hero Details */
+  .aboutUs-hero-details {
+    max-width: 500px;
+    text-align: left;
+    padding: 1em;
+  }
+  
+  .aboutUs-hero-heading {
+    font-size: 2.8em;
+    color: #00b391;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+  }
+  
+  .aboutUs-hero-description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 1.5em;
+  }
+  
+  /* About Us Hero Button */
+  .aboutUs-hero-button {
+    padding: 0.8em 1.5em;
+    background-color: #00b391;
+    color: #fff;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .aboutUs-hero-button:hover {
+    background-color: #009378;
+  }
+  
+  /* About Us Hero Image */
+  .aboutUs-hero-image-container {
+    max-width: 450px;
+    text-align: center;
+  }
+  
+  .aboutUs-hero-img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  /* About Section */
+  .about-section {
+    padding: 2em 0;
+    text-align: center;
+    background-color: #00b391;
+    color: #fff;
+    animation: fadeInUp 1.5s ease-in-out;
+  }
+  
+  .about-title {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .about-description {
+    font-size: 1.1em;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.6em;
+  }
+  
+  /* Values Section */
+  .values-section {
+    padding: 2em 0;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .values-title {
+    font-size: 2.2em;
+    color: #00b391;
+    margin-bottom: 0.5em;
+  }
+  
+  .values-description {
+    font-size: 1.1em;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.6em;
+  }
+  
+  /* Team Section */
+  .team-section {
+    padding: 2em 0;
+    text-align: center;
+    color: #666;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .team-title {
+    font-size: 2.2em;
+    color: #00b391;
+    margin-bottom: 0.5em;
+  }
+  
+  .team-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 1em 0;
+    animation: zoomIn 1.5s ease-in-out;
+  }
+  
+  .team-description {
+    font-size: 1.1em;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.6em;
+    color: #333;
+  }
+  
+  /* Keyframes for Animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes zoomIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-content {
+      text-align: center;
+    }
+    .hero-title, .about-title, .values-title, .team-title {
+      font-size: 2em;
+    }
+    .hero-image img, .team-image img {
+      max-width: 100%;
+    }
+  }
+  

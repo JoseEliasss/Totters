@@ -10,38 +10,7 @@ body {
   margin: 0 40px;
 }
 
-.status {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  margin: 20px 0;
-  border: 3px dashed #00b391;
-  border-radius: 15px;
-}
 
-.orders-status {
-  display: flex;
-  flex-direction: column;
-}
-
-.green-status {
-  font-weight: bold;
-  font-size: 20px;
-  color: #00b391;
-}
-
-.sub-status {
-  font-size: 14px;
-  color: #777;
-  margin-top: 5px;
-}
-
-.points-status {
-  font-weight: bold;
-  font-size: 24px;
-  color: #777;
-}
 .Hero {
 display: flex;
 flex-direction: row;

@@ -7,7 +7,7 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
-import RestaurantList from "./components/RestaurantList";
+import Restaurants from "./pages/Restaurants";
 import RestaurantDetail from "./components/RestaurantDescription";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="/RestaurantList" element={<RestaurantList />} />
+          <Route path="/Restaurants" element={<Restaurants />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/restaurant/:id" element={<RestaurantDetail />} />
         </Routes>

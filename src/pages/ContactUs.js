@@ -2,15 +2,14 @@ import React from 'react';
 import '../gallery/style/ContactUs.css';
 import ContactUsHero from "../gallery/images/ContactUsHero.jpeg";
 import ContactLocations from '../components/Locations';
+import Hero from '../components/Hero';
+import Status from '../components/Status';
 
 const ContactUs = () => {
   return (
     <div className='ContactUs'>
-      <div className="contact-hero-section" style={{ backgroundImage: `url(${ContactUsHero})`}}>
-          <div className="contact-overlay">
-            RIGHT TO YOUR DOORSTEP
-          </div>
-      </div>
+      <Status />
+      <Hero image={ContactUsHero} title="RIGHT TO YOUR DOORSTEP" />
       <div className="contact-container">
         <div className="contact-content-section">
           <h2 className="contact-title">CONTACT US</h2>
