@@ -1,32 +1,92 @@
+/* Status Container */
 .status {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 3px dashed #00b391;
-    border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 3px dashed #00b391;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+}
+
+/* Orders Status */
+.orders-status {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Status Color */
+.status-color {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+/* Specific Color Classes */
+.green-status {
+  color: #00b391;
+}
+
+.red-status {
+  color: #ff4d4d;
+}
+
+.blue-status {
+  color: #4d79ff;
+}
+
+/* Sub-Status Text */
+.sub-status {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Points Status */
+.points-status {
+  font-weight: bold;
+  font-size: 24px;
+  color: #777;
+  white-space: nowrap;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .status {
+    padding: 15px;
+    margin-bottom: 15px;
   }
-  
-  .orders-status {
-    display: flex;
-    flex-direction: column;
+
+  .status-color {
+    font-size: 18px;
   }
-  
-  .green-status {
-    font-weight: bold;
-    font-size: 20px;
-    color: #00b391;
-  }
-  
+
   .sub-status {
-    font-size: 14px;
-    color: #777;
-    margin-top: 5px;
+    font-size: 13px;
   }
-  
+
   .points-status {
-    font-weight: bold;
-    font-size: 24px;
-    color: #777;
+    font-size: 20px;
   }
+}
+
+@media (max-width: 480px) {
+  .status {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .status-color {
+    font-size: 20px;
+  }
+
+  .sub-status {
+    font-size: 12px;
+  }
+
+  .points-status {
+    font-size: 17px;
+  }
+}

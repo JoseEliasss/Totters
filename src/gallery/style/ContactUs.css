@@ -1,5 +1,11 @@
-/* ContactUs.css */
-.ContactUs{
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ContactUs {
   margin: 0 40px;
 }
 
@@ -29,6 +35,7 @@
   margin: 0 auto 40px;
 }
 
+/* Contact Form Styling */
 .contact-form-full {
   width: 100%;
   display: flex;
@@ -79,7 +86,6 @@
   border: 2px solid #00b391;
   font-weight: bold;
   text-transform: uppercase;
-
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -89,6 +95,7 @@
   color: #00b391;
 }
 
+/* Contact Locations Styling */
 .contact-locations {
   display: grid;
   grid-template-columns: 1fr;
@@ -111,7 +118,6 @@
   margin-bottom: 10px;
   color: #00b391;
   letter-spacing: 3px;
-  text-transform: uppercase;
 }
 
 .phone-info {
@@ -119,7 +125,6 @@
   margin-bottom: 10px;
   color: #555;
   letter-spacing: 3px;
-  text-transform: uppercase;
 }
 
 .phone-label {
@@ -137,8 +142,58 @@
   border: 2px solid #00b391;
 }
 
-@media (min-width: 768px) {
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .ContactUs {
+    margin: 0 20px;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-divider {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .contact-content-section {
+    padding: 15px;
+  }
+
+  .contact-form-group label {
+    font-size: 0.9rem;
+  }
+
+  .contact-input,
+  .contact-textarea {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .contact-submit-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+
   .contact-locations {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .location {
+    padding: 15px;
+    height: auto; /* Allows height to adjust based on content */
+  }
+
+  .location-title {
+    font-size: 1.3rem;
+  }
+
+  .phone-info {
+    font-size: 0.9rem;
+  }
+
+  .location-map {
+    height: 250px; /* Adjusted height for smaller screens */
   }
 }

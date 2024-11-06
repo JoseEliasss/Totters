@@ -9,7 +9,7 @@ const Status = ({ statusColor = "Green", subStatus, points = "80K Points" }) => 
           {statusColor}
         </div>
         <div className="sub-status">
-          {subStatus || "10 more orders by October 31 to reach Gold."}
+          {subStatus || "10 more orders to reach Gold."}
         </div>
       </div>
       <div className="points-status">{points}</div>

@@ -1,3 +1,4 @@
+/* General Styling for Restaurants Page */
 .Restaurants {
     margin: 0px 40px;
 }
@@ -8,4 +9,19 @@
     text-align: center;
     line-height: 120px;
     letter-spacing: 2px;
-  }
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .Restaurants {
+        margin: 0 20px;
+    }
+
+    .title {
+        line-height: 80px;
+        font-size: 1.5rem; 
+    }
+}
+
