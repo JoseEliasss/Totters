@@ -55,7 +55,7 @@ const data = [
     currency: "$",
     type: ["Lebanese", "Salads", "Sandwiches", "Breakfast"],
     rating: 4.7,
-    favorite: true,
+    favorite: false,
     delivery: "25-40 mins",
     description: [
       {
@@ -142,7 +142,7 @@ const data = [
     currency: "$",
     type: ["Japanese", "Sushi"],
     rating: 4.8,
-    favorite: true,
+    favorite: false,
     delivery: "40-60 mins",
     description: [
       {
@@ -186,7 +186,7 @@ const data = [
     currency: "$",
     type: ["Italian", "Pasta"],
     rating: 4.5,
-    favorite: true,
+    favorite: false,
     delivery: "25-40 mins",
     description: [
       {
@@ -272,7 +272,7 @@ const data = [
     currency: "$",
     type: ["American", "Salads", "Sandwiches", "Breakfast"],
     rating: 4.7,
-    favorite: true,
+    favorite: false,
     delivery: "25-40 mins",
     description: [
       {
@@ -359,7 +359,7 @@ const data = [
     currency: "$",
     type: ["Japanese", "Sushi"],
     rating: 4.8,
-    favorite: true,
+    favorite: false,
     delivery: "40-60 mins",
     description: [
       {
@@ -403,7 +403,7 @@ const data = [
     currency: "$",
     type: ["Lebanese", "manakich"],
     rating: 4.5,
-    favorite: true,
+    favorite: false,
     delivery: "25-40 mins",
     description: [
       {
