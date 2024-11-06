@@ -15,7 +15,7 @@ const RestaurantList = ({ count, typeFilter, location }) => {
   const displayedData = count ? filteredData.slice(0, count) : filteredData;
 
   return (
-    <div className="restaurants">
+    <div className="restaurant-list-container">
       <div className="restaurants-list">
         {displayedData.map((r) => (
           <RestaurantCard

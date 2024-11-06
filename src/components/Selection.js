@@ -1,25 +1,46 @@
 import React from "react";
-import RestaurantList from "./RestaurantList";
-import "../gallery/style/Selection.css";
 import { useNavigate } from "react-router-dom";
+import "../gallery/style/Selection.css";
+import data from "../FoodData";
+import RestaurantCard from "./RestaurantCard";
 
-const Selection = ({ type, count, location }) => {
+const RestaurantCarousel = ({ count, typeFilter, location }) => {
   const navigate = useNavigate();
-  const handleViewAll = () => {
-    navigate("/restaurants"); 
+
+  console.log("Type Filter:", typeFilter, "Count:", count, "Location:", location);
+
+  const filteredData = data
+    .filter((r) => 
+      (!typeFilter || r.type.some((type) => type.toLowerCase() === typeFilter.toLowerCase())) &&
+      (!location || r.location.toLowerCase() === location.toLowerCase())
+    );
+
+  const displayedData = count ? filteredData.slice(0, count) : filteredData;
+
+  // Handler for View All button click
+  const handleViewAllClick = () => {
+    window.scrollTo(0, 0); // Scroll to top of the page
+    navigate("/restaurants"); // Navigate to the Restaurants page
   };
 
   return (
-    <div className="selection">
-      <h2>{type}</h2>
-      <div className="carousel-container">
-        <RestaurantList typeFilter={type} count={count} location={location}/>
-        <button className="view-all" onClick={handleViewAll}>
-          View All
-        </button>
+    <div className="restaurant-carousel">
+      <div className="carousel-list">
+        {displayedData.map((r) => (
+          <RestaurantCard
+            key={r.id}
+            favorite={r.favorite}
+            {...r}
+            type={r.type.join(", ")}
+          />
+        ))}
+        <div className="view-all-container">
+          <button className="view-all-button" onClick={handleViewAllClick}></button>
+          <div className="view-all-text">View All</div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Selection;
+export default RestaurantCarousel;

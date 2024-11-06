@@ -1,80 +1,28 @@
-.restaurant-list {
+/* Container for Restaurant List */
+.restaurant-list-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  padding: 0;
-  list-style-type: none;
-  height: 370px;
-  width: 400px;
-  border: 1px solid #ddd; /* Optional: border around each item */
-  border-radius: 8px; /* Rounded corners */
-  text-align: left; /* Center the text inside the item */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
 }
 
 .restaurants-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2em;
-  text-decoration: none;
 }
 
-.restaurant-image {
-  width: 100%; /* Make the image full width of the item */
-  height: 200px; /* Fixed height for the image */
-  object-fit: cover; /* Maintain aspect ratio of images */
-  border-radius: 4px; /* Optional: rounded corners for the image */
+.restaurants-list .restaurant-card {
+  flex: 1 1 calc(33.33% - 20px);
 }
 
-.favIcon {
-  position: absolute;
-  top: -2%;
-  right: -2.5%;
-  z-index: 1;
-  font-size: 1.5em;
-  border: 0px;
-  background-color: transparent;
+
+@media (max-width: 700px) {
+  .restaurants-list .restaurant-card {
+    flex: 1 1 calc(50% - 20px); 
+  }
 }
 
-.restaurantName,
-.currencyAbout,
-.delivery {
-  color: black;
-  text-decoration: none; /* Ensure no underline */
-  text-align: left;
-  padding: 0;
-}
 
-.feedback {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.delivery {
-  position: absolute;
-  top: 45%;
-  right: 0%;
-  z-index: 1;
-  text-align: center;
-  width: 6em;
-  padding: 0.5em;
-  background-color: rgb(255, 255, 255);
-  border-radius: 15%;
-  border: 1px solid rgb(154, 139, 139);
-  color: black;
-}
-
-.nameLocation {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-}
-
-.rating {
-  color: black;
+@media (max-width: 550px) {
+  .restaurants-list .restaurant-card {
+    flex: 1 1 100%;
+  }
 }

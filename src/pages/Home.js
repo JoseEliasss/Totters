@@ -36,6 +36,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Selection />
     </div>
   );
 };

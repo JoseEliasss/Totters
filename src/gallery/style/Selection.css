@@ -1,65 +1,88 @@
-/* Selection container */
-.selection {
-    padding: 30px;
-    text-align: center;
-}
 
-/* Section title styling */
-.selection h2 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #444;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+.restaurant-carousel {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 16px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .carousel-list {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    scroll-snap-align: start;
+    padding-bottom: 10px;
+  }
+  
+  /* Custom scrollbar styling */
+  .restaurant-carousel::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .restaurant-carousel::-webkit-scrollbar-thumb {
+    background-color: #00b391;
+    border-radius: 0;
+  }
+  
+  .restaurant-carousel::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
 
-/* Carousel container for horizontal scroll */
-.carousel-container {
+  .view-all-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .view-all-button {
+    background-color: #00b391;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-}
-
-
-/* Smooth scrollbars */
-.carousel-container::-webkit-scrollbar {
-    height: 8px;
-}
-
-.carousel-container::-webkit-scrollbar-thumb {
-    background-color: #ddd;
-    border-radius: 4px;
-}
-
-.carousel-container::-webkit-scrollbar-thumb:hover {
-    background-color: #bbb;
-}
-
-/* "View All" button styling at the end of carousel */
-.view-all {
-    min-width: 120px;
-    flex: 0 0 auto;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background: linear-gradient(135deg, #007bff, #0056b3);
-    border: none;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    justify-content: center;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    margin-left: 15px;
-}
+    transition: background-color 0.3s ease;
+    margin: 30px;
+  }
+  
+  .view-all-button:hover {
+    background-color: #009c7d;
+  }
+  
+  .view-all-button::before {
+    content: '→';
+    font-size: 1.5rem;
+  }
+  
+  .view-all-text {
+    color: #00b391;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
 
-.view-all:hover {
-    background: linear-gradient(135deg, #0056b3, #003f8a);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 86, 179, 0.4);
-}
-
-.view-all:focus {
-    outline: none;
-}
+  @media (max-width: 768px) {
+    .carousel-list {
+      gap: 12px;
+    }
+  
+    .view-all-button {
+      width: 50px;
+      height: 50px;
+      font-size: 0.3rem;
+      margin: 10px;
+    }
+  
+    .view-all-text {
+      font-size: 0.8rem;
+    }
+  }
+  
