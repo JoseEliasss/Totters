@@ -29,24 +29,41 @@
 
 /* Style for the type filter button */
 .type-filter-button {
-  position: absolute; /* Change from relative to fixed to keep it in place when scrolling */
-  top: 20px; /* Position from top */
-  right: 20px; /* Position from right edge */
-  z-index: 10; /* Ensure it stays above other content */
+  border: 1px solid #00b291;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 10; 
   display: inline-block;
   text-align: right;
+}
+
+.type-filter-button button {
+  border: 1px solid #00b291;
+  color: #00b291;
+  padding: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  width: 150px;
+  text-align: left;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.type-filter-button button span {
+  margin-left: 8px; /* Spacing for the dropdown arrow */
 }
 
 /* Style for the dropdown menu */
 .dropdown-options {
   display: block;
   position: absolute;
-  top: 100%; /* Position it below the button */
+  top: 100%; 
   right: 0;
   background-color: white;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  width: 150px; /* Set a fixed width for the dropdown */
+  width: 150px; 
 }
 
 /* Style for dropdown buttons */
@@ -62,21 +79,4 @@
 /* Hover effect for dropdown buttons */
 .dropdown-options button:hover {
   background-color: #f1f1f1;
-}
-
-/* Style for the main button (the one triggering the dropdown) */
-button {
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  cursor: pointer;
-  width: 150px;
-  text-align: left;
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between; /* Align text and dropdown arrow */
-}
-
-button span {
-  margin-left: 8px; /* Spacing for the dropdown arrow */
 }

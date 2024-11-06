@@ -47,11 +47,15 @@ const RestaurantList = ({ count, location }) => {
         </button>
         {isDropdownOpen && (
           <div className="dropdown-options">
-            <button onClick={() => handleTypeChange("All")}>All</button>
+            <button onClick={() => handleTypeChange("All")}>
+              All
+            </button>
             <button onClick={() => handleTypeChange("Lebanese")}>
               Lebanese
             </button>
-            <button onClick={() => handleTypeChange("Italian")}>Italian</button>
+            <button onClick={() => handleTypeChange("Italian")}>
+              Italian
+            </button>
             <button onClick={() => handleTypeChange("American")}>
               American
             </button>
@@ -64,12 +68,12 @@ const RestaurantList = ({ count, location }) => {
       <div className="restaurant-list-container">
         <div className="restaurants-list">
           {displayedData.map((r) => (
-            <RestaurantCard
+              <RestaurantCard
               key={r.id}
               favorite={r.favorite}
               {...r}
               type={r.type.join(", ")}
-            />
+              />
           ))}
         </div>
       </div>

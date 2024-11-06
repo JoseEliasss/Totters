@@ -17,17 +17,9 @@
   
   /* Custom scrollbar styling */
   .restaurant-carousel::-webkit-scrollbar {
-    height: 8px;
+    display: none;
   }
-  
-  .restaurant-carousel::-webkit-scrollbar-thumb {
-    background-color: #00b391;
-    border-radius: 0;
-  }
-  
-  .restaurant-carousel::-webkit-scrollbar-track {
-    background: transparent;
-  }
+
   
 
   .view-all-container {
@@ -86,3 +78,7 @@
     }
   }
   
+.selection-restaurant-card .restaurant-card{
+  width: 400px;
+  height: 320px;
+}

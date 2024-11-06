@@ -33,12 +33,11 @@ export default function RestaurantCard({
           <h2 className="restaurantName">
             {name} - {location}
           </h2>
-
           <span className="delivery">{delivery}</span>
-
-          <p>{type}</p>
-          <span className="rating">⭐ {rating}</span>
-          <p className="discount">{discount}</p>
+          <div className="restaurant-details">
+            <p>{type}</p>
+            <span className="rating">⭐ {rating}</span>
+          </div>
         </div>
       </Link>
     </div>

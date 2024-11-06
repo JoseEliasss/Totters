@@ -35,8 +35,25 @@ const Home = () => {
             <img className="single-gif" src={Gif2} alt="gif2" />
           </div>
         </div>
+
+        {/* Selections with Titles */}
+        <div className="selections">
+          <div className="selection-section">
+            <h2 className="selection-title">🍕 Popular Italian Choices</h2>
+            <Selection typeFilter="Italian" location="" count={5} />
+          </div>
+          
+          <div className="selection-section">
+            <h2 className="selection-title">📍 Kaslik Favorites</h2>
+            <Selection typeFilter="" location="Kaslik" count={5} />
+          </div>
+
+          <div className="selection-section">
+            <h2 className="selection-title">🍔 American Classics</h2>
+            <Selection typeFilter="American" location="" count={5} />
+          </div>
+        </div>
       </div>
-      <Selection />
     </div>
   );
 };

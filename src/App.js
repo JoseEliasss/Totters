@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
 import Restaurants from "./pages/Restaurants";
 import RestaurantDetail from "./components/RestaurantDescription";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Restaurants" element={<Restaurants />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/restaurant/:id" element={<RestaurantDetail />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </Router>

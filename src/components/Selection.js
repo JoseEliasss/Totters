@@ -27,12 +27,14 @@ const RestaurantCarousel = ({ count, typeFilter, location }) => {
     <div className="restaurant-carousel">
       <div className="carousel-list">
         {displayedData.map((r) => (
-          <RestaurantCard
+          <div className="selection-restaurant-card">
+            <RestaurantCard
             key={r.id}
             favorite={r.favorite}
             {...r}
             type={r.type.join(", ")}
-          />
+            />
+          </div>
         ))}
         <div className="view-all-container">
           <button className="view-all-button" onClick={handleViewAllClick}></button>

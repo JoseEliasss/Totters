@@ -98,7 +98,7 @@
 /* Contact Locations Styling */
 .contact-locations {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding: 20px;
   background: #f9f9f9;
