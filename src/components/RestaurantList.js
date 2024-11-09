@@ -27,6 +27,7 @@ const RestaurantList = ({ count, location }) => {
     "Location:",
     location
   );
+  
 
   const filteredData = data.filter(
     (r) =>

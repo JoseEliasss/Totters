@@ -7,6 +7,7 @@ const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
+  const [orderStatus, setOrderStatus] = useState(""); // New state for order status
 
   // Calculate total amount
   const totalAmount = cartItems.reduce(
@@ -21,21 +22,30 @@ const Cart = () => {
   const handleSubmitOrder = (e) => {
     e.preventDefault();
     setShowModal(false);
-    dispatch(clearCart());
+
+    // Set "Sending order..." message and delay order processing
+    setOrderStatus("Sending your order...");
+
+    setTimeout(() => {
+      dispatch(clearCart());
+      setOrderStatus("Your order is sent!"); // Update status message after 2 seconds
+    }, 2000);
   };
 
   // If cart is empty, show a styled message
-  if (cartItems.length === 0) {
+  if (cartItems.length === 0 && !orderStatus) {
     return (
-      <p style={{
-        textAlign: "center",
-        fontSize: "25px",
-        fontWeight: "800",
-        margin: "auto",
-        textTransform: "uppercase",
-        letterSpacing: "2px",
-        margin: "200px"
-      }}>
+      <p
+        style={{
+          textAlign: "center",
+          fontSize: "25px",
+          fontWeight: "800",
+          margin: "auto",
+          textTransform: "uppercase",
+          letterSpacing: "2px",
+          margin: "200px",
+        }}
+      >
         Your cart is empty
       </p>
     );
@@ -112,6 +122,20 @@ const Cart = () => {
             </form>
           </div>
         </div>
+      )}
+
+      {/* Display order status message */}
+      {orderStatus && (
+        <p
+          style={{
+            textAlign: "center",
+            fontSize: "18px",
+            fontWeight: "600",
+            marginTop: "20px",
+          }}
+        >
+          {orderStatus}
+        </p>
       )}
     </div>
   );
